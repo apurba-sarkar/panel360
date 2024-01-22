@@ -56,8 +56,8 @@ const Login = () => {
   return (
     <div>
       <form>
-        <div>Register</div>
-        <h1>Register form</h1>
+        <div>Login</div>
+        <h1>Login form</h1>
         <div>
           <div>
             <label htmlFor="email">Email</label>

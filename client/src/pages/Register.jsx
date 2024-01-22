@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
 
-const Register = () => {
+const Register = () => {``
   const initialState = {
     username: "",
     email: "",
@@ -41,8 +41,8 @@ const Register = () => {
 
       if (response.ok) {
         // setUser(initialState);
+        alert("register successfull")
         navigate("/login");
-
         const res_data = await response.json();
         console.log("respose json data from server", res_data);
         storetoken(res_data.token);

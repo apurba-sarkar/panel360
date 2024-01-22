@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../store/auth";
+import "../styles/navbar.css";
 
 const Navbar = () => {
   const { isLoggedIn } = useAuth();
@@ -7,20 +8,51 @@ const Navbar = () => {
 
   return (
     <div>
-      <header>
-        <div>logo</div>
+      <header className="mobileheader">
         <div>
-          header
-          <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/home">Home</NavLink>
-          {isLoggedIn ? (
-            <NavLink to="/login">Login</NavLink>
-          ) : (
-            <NavLink to="/logout">Logout</NavLink>
-          )}
-          <NavLink to="/register">Register</NavLink>
-          <NavLink to="/service">Service</NavLink>
+          <a href="/">
+            <img className="herologo" src="/logo.png" alt=""  />
+          </a>
+        </div>
+        <div className="secondheader">
+          <ul>
+            <li>
+              <NavLink className="link" to="/contact">
+                Contact
+              </NavLink>
+            </li>
+            <li>
+              {" "}
+              <NavLink className="link" to="/about">
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink className="link" to="/service">
+                Service
+              </NavLink>
+            </li>
+            <li>
+              {isLoggedIn ? (
+                <NavLink to="/login" className="link">
+                  Login
+                </NavLink>
+              ) : (
+                <NavLink to="/logout" className="link">
+                  Logout
+                </NavLink>
+              )}
+            </li>
+            <li>
+              {isLoggedIn ? (
+                <NavLink to="/register" className="link">
+                  Register
+                </NavLink>
+              ) : (
+                ""
+              )}
+            </li>
+          </ul>
         </div>
       </header>
     </div>

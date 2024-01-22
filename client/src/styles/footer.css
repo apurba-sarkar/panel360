@@ -1,0 +1,16 @@
+
+.primaryfooter{
+    background-color: #f7c317;
+    height: 2rem;
+
+}
+.secondaryfooter{
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 20rem;
+    background-color: #0a1d56;
+
+}
